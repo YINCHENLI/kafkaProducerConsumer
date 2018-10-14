@@ -29,10 +29,6 @@ public class KafkaConsumer extends Thread{
         return Consumer.createJavaConsumerConnector(new ConsumerConfig(properties));
 
         //消费的时候使用的是zookeeper
-
-
-
-
     }
 
     @Override
@@ -47,7 +43,7 @@ public class KafkaConsumer extends Thread{
         //value - List<KafkaStream<byte[], byte[]>> : 对应的数据流
         Map<String, List<KafkaStream<byte[], byte[]>>> messageStream = consumer.createMessageStreams(topicCountMap);
 
-        KafkaStream<byte[], byte[]> stream = messageStream.get(topic).get(0);
+        KafkaStream<byte[], byte[]> stream = messageStream.get(topic).get(0);//我们每次接收到的数据
 
         ConsumerIterator<byte[], byte[]> iterator = stream.iterator();
 
