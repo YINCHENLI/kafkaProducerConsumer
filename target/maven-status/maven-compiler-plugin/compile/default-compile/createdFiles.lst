@@ -1,0 +1,5 @@
+com/yinchen/spark/project/utils/HBaseUtils.class
+com/yinchen/spark/kafka/KafkaClientApp.class
+com/yinchen/spark/kafka/KafkaProperties.class
+com/yinchen/spark/kafka/KafkaProducer.class
+com/yinchen/spark/kafka/KafkaConsumer.class
